@@ -9,4 +9,4 @@ num-bigint = "0.4"
 num-traits = "0.1"
 [dependencies.nokhwa]
 version = "0.10.5"
-features = ["input-native", "output-wgpu"]
+features = ["input-native"]
