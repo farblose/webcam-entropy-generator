@@ -1,13 +1,15 @@
 # Webcam Entropy Generator
 
-The **Webcam Entropy Generator** is a Rust-based application designed to generate entropy by capturing frames from a webcam. It utilizes the `nokhwa` library to interface with the camera, capturing images and calculating entropy through pixel-level operations. This entropy is then converted into a large unsigned integer, which can be used for cryptographic or random number generation purposes.
+The **Webcam Entropy Generator** is a Rust-based application designed to generate entropy by measuring thermal noise in local webcam sensors. It utilizes the `nokhwa` library to interface with the camera and capture frames. This entropy is then converted into a random large unsigned integer, which can be used for cryptographic purposes.
 
-## Features
+## Understanding Thermal Noise in Camera Sensors
 
-- **Camera Integration**: Uses the `nokhwa` library to access and control webcam devices.
-- **Entropy Calculation**: Captures multiple frames and calculates entropy by performing XOR operations on pixel data.
-- **Binary to Decimal Conversion**: Converts the generated binary entropy string into a `BigUint` for further use.
-- **Configurable Output Size**: Allows users to specify the desired size of the output number in bits via command line arguments.
+Thermal noise, also known as dark current noise, is a type of noise that affects the performance of camera sensors. It arises from the random motion of electrons within the sensor's semiconductor material, which is influenced by temperature. As the temperature increases, the kinetic energy of the electrons also increases, leading to more frequent and random electron movements.
+
+### Causes of Thermal Noise
+
+1. **Electron Movement**: Atoms in the semiconductor lattice vibrate due to thermal energy, causing electrons to be knocked loose and generate a small current even in the absence of light.
+2. **Temperature Dependence**: The level of thermal noise is directly proportional to the temperature of the sensor. Higher temperatures result in higher noise levels.
 
 ## Installation
 ```bash
