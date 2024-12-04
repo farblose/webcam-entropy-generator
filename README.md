@@ -12,6 +12,7 @@ Thermal noise, also known as dark current noise, is a type of noise that affects
 2. **Temperature Dependence**: The level of thermal noise is directly proportional to the temperature of the sensor. Higher temperatures result in higher noise levels.
 
 ## Installation
+
 ```bash
 git clone https://github.com/farblose/webcam-entropy-generator.git && \
 cd webcam-entropy-generator && \
